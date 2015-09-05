@@ -10,16 +10,113 @@
 <div class = "text-center">
 	<h3> Let us find the chairty that is right for you</h3>
 	<br>
-	<p> By answering a few simple questions we will match you with the right chairity.
+	<p> By answering a few simple questions we will match you with the right charity.
 	</p>
 </div>
 
+<div class = "final">
+	<p></p>Looks like the right charity for you is</p>
+	<h1></h1>
+</div>
 	
 
 <script type="text/javascript">
 	
 </script>
+<script>
 
+/*1. Internation vs. US
+2. Give through employer
+3. Donation Schedule
+4. Volunteer
+5. Christian org
+*/
+
+var char_international, give_through_employer, donate_monthly, can_volunteer, christian_org;
+
+var feeding_america = 0;
+var salvation_army = 0;
+var task_force = 0;
+var united_way = 0;
+
+alert("For the following questions, please select the “OK” button if the answer is true. Choose “Cancel” if the answer is false.");
+char_international = confirm("I prefer donating to an international charity");
+give_through_employer = confirm("I prefer donating through my employer");
+donate_monthly = confirm("I prefer donating monthly");
+can_volunteer = confirm("I prefer volunteering time instead of donating money ");
+christian_org = confirm("I prefer donating to a Christian charity");
+
+
+
+if (char_international){
+   salvation_army++;
+   task_force++;
+   united_way++;
+} else {
+	feeding_america++;
+}
+
+
+if (give_through_employer){
+	united_way++;
+} else {
+	task_force++;
+	feeding_america++;
+	salvation_army++;
+}
+
+if (donate_monthly){
+	salvation_army++;
+	feeding_america++;
+	task_force++;
+} else {
+	united_way++;
+}
+
+if (can_volunteer){
+	salvation_army++;
+	feeding_america++;
+	united_way++;
+} else {
+	task_force++;
+}
+
+if (christian_org){
+	salvation_army++;
+} else {
+	task_force++;
+	feeding_america++;
+	united_way++;
+}
+
+var char_array = [united_way, feeding_america, task_force, salvation_army];
+
+var char_name = ["United Way", "Feeding America", "Task Force", "Salvation Army"];
+
+var temp = 0;
+
+for (var i = 1; i < char_array.length; i++) {
+	if (char_array[temp] < char_array[i]){
+		temp = i;
+	}
+}
+
+ var selection = char_name[temp];
+
+
+/*
+console.log(salvation_army);
+console.log(feeding_america);
+console.log(task_force);
+console.log(united_way);*/
+
+console.log(selection);
+
+</script>
+<script>
+	$('h1').append("selection");
+</script>
+</script>
 
 </body>
 </html>
