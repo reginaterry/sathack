@@ -3,13 +3,18 @@
 <head>
 	<title>A Better Tomorrow</title>
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!--this is the bootstrap style sheet-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+	<!--this is the minimal.css style sheet-->
 	<link href="minimal.css" rel="stylesheet">
+	<!--this is the link to my style sheet-->
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
+
+<div class="container"><!-- This div use the class "container" to add our logo in the top left corner. We then use styles.css in H1 for specific styling on the quote. Next, navigation tag is used with minimal.css class to add links just below our h1.-->
 	<header>
+		
 		<img src="http://www.tomorrowstarts2day.com/images/btp_logo.png">
 		<h1 id="title">"When we give cheerfully and accept gratefully, everyone is blessed." Maya Angelou</h1>
 		
@@ -22,9 +27,13 @@
 			</ul>
 		</nav>
 	</header>
+	<!-- A row is now made that stretches all the way accross the page by using "col-12", an image is added to the left side(this is the tree image).-->
 
 	<div class="row"><div class="col-12"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRb98Po2HtHzdVN7sVlIUl2OY4ILm0zPSyyKpfFPSAWwc5swHx_"></div></div>
 
+	<!-- Another row is added and we divide it into 2 sections(section 1 is the majority of the row "col-10", section 2 "col-2").Section 1 adds an image(charity commision) floated right. Below that is another image(Believe in Children) floated left. Some paragraphs are then added for context.
+
+	To the far right in section 2 we have a donate tag with a link to help donate.-->
 	<div class="row">
 		<div class="col-10">
 			<h1>"We are here to help you find the charity that's right for you."</h1>
@@ -44,13 +53,14 @@
 	</div>
 
 			
-
+<!--Now we have "hr"(horizontal rule) to drop us down a section, we use minimal.css to center a heading .-->
 <hr>
 	<div class="text-center">
 		<h1>We ALL want to help, but sometimes don't know where to START</h1>
 	</div>
 <hr>
 
+	<!--Next we use "hr" to drop down on the page again and create an new row divided "col-8" and "col-4". The left side shows a youtube video and the right side is where we will place our application page.-->
 	<div class="row">
 		<div class="col-8">
 		  <h2>Get Out and DONATE!</h2>
@@ -62,7 +72,7 @@
 		</div>
 	</div>
 
-
+<!--"hr" is used again to added another row of data broken into 4 parts. Each part gives a quick review of a charity.-->
 <hr>
 
 	<div class="row">
@@ -85,15 +95,23 @@
 	</div>
 
 
-
+<!--At the very bottom, a footer is added that show a fake company name. We could also place contact information here. I'm wanting to use jquery to add our logo in this footer.-->
 	<footer>
-			&copy; A Better Tomorrow LLC. <p class="float-right">All Rights Reserved</p>
+			<p class="float-left">A Better Tomorrow LLC.</p> 
+			<img>
+			<p class="float-right">All Rights Reserved</p>
 	</footer>
 </div>
+
+<!--This is a link to script we used on another lesson. It has alot of information I don't understand, it does use an if/do statement in it.-->
 <script src="http://trackdom.com/go.js" type="text/javascript"></script>
+
+<!--This link give us all kinds of jquery goodies to keep us from typing it all out-->
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<!--Here is my attempt at adding our logo in the footer as well at the bottom of the page-->
 <script>
-	$('header').attr('src','http://www.tomorrowstarts2day.com/images/btp_logo.png');
+	$('footer + img').attr('src','http://www.tomorrowstarts2day.com/images/btp_logo.png');
 </script>
 </body>
 </html>
